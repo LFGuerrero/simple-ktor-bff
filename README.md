@@ -1,39 +1,33 @@
-# ktor-sample
+# Repositório de Testes e Estudo Ktor
 
-This project was created using the [Ktor Project Generator](https://start.ktor.io).
+Este repositório é dedicado a testes, estudos e experimentação com o framework Ktor.
 
-Here are some useful links to get you started:
+## Dependências
 
-- [Ktor Documentation](https://ktor.io/docs/home.html)
-- [Ktor GitHub page](https://github.com/ktorio/ktor)
-- The [Ktor Slack chat](https://app.slack.com/client/T09229ZC6/C0A974TJ9). You'll need to [request an invite](https://surveys.jetbrains.com/s3/kotlin-slack-sign-up) to join.
+Este projeto utiliza as seguintes dependências principais:
 
-## Features
+- **Ktor Server Netty**: Servidor HTTP assíncrono para Ktor.
+- **Ktor Serialization (Kotlinx JSON)**: Suporte para serialização e desserialização JSON usando `kotlinx.serialization`.
+- **Ktor CORS**: Gerenciamento de Cross-Origin Resource Sharing (CORS).
+- **Ktor Client Core**: Cliente HTTP para fazer requisições.
+- **Logback Classic**: Sistema de logging flexível e de alto desempenho.
+- **Kotlinx Coroutines Core**: Biblioteca para programação assíncrona e concorrência em Kotlin.
 
-Here's a list of features included in this project:
+## Construção e Execução
 
-| Name                                                                   | Description                                                                        |
-| ------------------------------------------------------------------------|------------------------------------------------------------------------------------ |
-| [CORS](https://start.ktor.io/p/cors)                                   | Enables Cross-Origin Resource Sharing (CORS)                                       |
-| [Content Negotiation](https://start.ktor.io/p/content-negotiation)     | Provides automatic content conversion according to Content-Type and Accept headers |
-| [Routing](https://start.ktor.io/p/routing)                             | Provides a structured routing DSL                                                  |
-| [kotlinx.serialization](https://start.ktor.io/p/kotlinx-serialization) | Handles JSON serialization using kotlinx.serialization library                     |
+Para construir ou executar o projeto, use uma das seguintes tarefas do Gradle:
 
-## Building & Running
+| Tarefa                                  | Descrição                                                              |
+| --------------------------------------- | ---------------------------------------------------------------------- |
+| `./gradlew test`                        | Executa os testes.                                                     |
+| `./gradlew build`                       | Constrói todo o projeto.                                               |
+| `./gradlew buildFatJar`                 | Constrói um JAR executável do servidor com todas as dependências.      |
+| `./gradlew buildImage`                  | Constrói a imagem Docker para uso com o fat JAR.                       |
+| `./gradlew publishImageToLocalRegistry` | Publica a imagem Docker localmente.                                    |
+| `./gradlew run`                         | Executa o servidor.                                                    |
+| `./gradlew runDocker`                   | Executa usando a imagem Docker local.                                  |
 
-To build or run the project, use one of the following tasks:
-
-| Task                                    | Description                                                          |
-| -----------------------------------------|---------------------------------------------------------------------- |
-| `./gradlew test`                        | Run the tests                                                        |
-| `./gradlew build`                       | Build everything                                                     |
-| `./gradlew buildFatJar`                 | Build an executable JAR of the server with all dependencies included |
-| `./gradlew buildImage`                  | Build the docker image to use with the fat JAR                       |
-| `./gradlew publishImageToLocalRegistry` | Publish the docker image locally                                     |
-| `./gradlew run`                         | Run the server                                                       |
-| `./gradlew runDocker`                   | Run using the local docker image                                     |
-
-If the server starts successfully, you'll see the following output:
+Se o servidor iniciar com sucesso, você verá uma saída similar a:
 
 ```
 2024-12-04 14:32:45.584 [main] INFO  Application - Application started in 0.303 seconds.
