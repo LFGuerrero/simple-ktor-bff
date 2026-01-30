@@ -34,3 +34,4 @@ Se o servidor iniciar com sucesso, você verá uma saída similar a:
 2024-12-04 14:32:45.682 [main] INFO  Application - Responding at http://0.0.0.0:8080
 ```
 
+aider --model gemini/gemini-2.5-flash
